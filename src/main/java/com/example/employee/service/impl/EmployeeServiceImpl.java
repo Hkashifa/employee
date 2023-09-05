@@ -28,7 +28,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         List<EmployeeEntity> all_employee;
         all_employee = employeeRepository.findAll();
-        return all_employee.stream().map(doctor -> modelMapper.map(doctor, EmployeeDTO.class))
+        return all_employee.stream().map(employee -> modelMapper.map(employee, EmployeeDTO.class))
                 .collect(Collectors.toList());
     }
 
